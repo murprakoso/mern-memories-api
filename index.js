@@ -3,12 +3,12 @@ import bodyParser from 'body-parser';
 import mongoose from 'mongoose';
 import cors from 'cors';
 import dotenv from 'dotenv';
-dotenv.config();
 // import router
 import postRoutes from './routes/posts.js';
 
 /** start */
 const app = express();
+dotenv.config();
 
 /** use body-parser, CORS */
 app.use(bodyParser.json({ limit: "30mb", extended: true }));
@@ -20,7 +20,7 @@ app.use('/posts', postRoutes);
 /** ./middleware */
 
 /** Mongoose connect db */
-const DB = process.env.DATABASE_LOCAL;
+const DB = process.env.DATABASE_CLOUD;
 const port = process.env.PORT || 8000
 mongoose.connect(DB, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false })
     .then(() => {
