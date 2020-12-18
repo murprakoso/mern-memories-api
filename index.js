@@ -24,7 +24,7 @@ app.get('/', (req, res) => {
 
 /** Mongoose connect db */
 const DB = process.env.DATABASE_CLOUD;
-const PORT = process.env.PORT || 8000
+const PORT = process.env.PORT || 8080
 mongoose.connect(DB, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false })
     .then(() => {
         // listening port 
