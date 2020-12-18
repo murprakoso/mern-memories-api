@@ -24,12 +24,12 @@ app.get('/', (req, res) => {
 
 /** Mongoose connect db */
 const DB = process.env.DATABASE_CLOUD;
-const port = process.env.PORT || 8000
+const PORT = process.env.PORT || 8000
 mongoose.connect(DB, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false })
     .then(() => {
         // listening port 
-        app.listen(port, () => {
-            console.log(`Server running at port : ${port}`);
+        app.listen(PORT, () => {
+            console.log(`Server running at port : ${PORT}`);
         })
 
     })
