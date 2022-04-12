@@ -1,0 +1,16 @@
+GET http://localhost:8080/
+
+###
+GET http://localhost:8080/posts
+
+###
+POST http://localhost:8080/posts
+Content-Type: application/json
+
+{
+    "title": "TEST title",
+    "message" : "this is message",
+    "creator" : "Lorem isp",
+    "tags": "yes",
+    "selectedFile" : "pic.png"
+}
